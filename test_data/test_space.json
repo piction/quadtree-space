@@ -1,0 +1,993 @@
+{
+    "layout": {
+        "area_templates": [
+            {
+                "id": "default_drop_policy",
+                "policy": {
+                    "drop_approach_d": 5.0,
+                    "max_drop_approach_speed": 3.0,
+                    "max_drop_dec": 5.5,
+                    "min_drop_approach_speed": 0.0,
+                    "min_drop_approach_speed_stop_d": 3.0,
+                    "orient_leave_distance": 0.5,
+                    "pause_at_drop_seconds": 0.8
+                },
+                "type": "inertia_drop_policy"
+            },
+            {
+                "id": "drive_through_pick",
+                "policy": {
+                    "pick_drive_speed": 1.0
+                },
+                "type": "drive_through_pick"
+            },
+            {
+                "id": "queue_staging",
+                "max_speed": 1.0,
+                "type": "queue_staging"
+            },
+            {
+                "direction": {
+                    "x": -0.9998253580147354,
+                    "y": -0.018688324448873597
+                },
+                "id": "drop_1",
+                "position": {
+                    "x": -10.905246112191044,
+                    "y": 2.7287698879855
+                },
+                "type": "inertia_drop"
+            },
+            {
+                "direction": {
+                    "x": 0.9996179391690149,
+                    "y": -0.027640110193190577
+                },
+                "id": "drop_2",
+                "position": {
+                    "x": 13.705945583511667,
+                    "y": 3.128562376003229
+                },
+                "type": "inertia_drop"
+            },
+            {
+                "direction": {
+                    "x": 0.0,
+                    "y": 1.0
+                },
+                "id": "drop_2",
+                "position": {
+                    "x": 11.604886478853444,
+                    "y": -2.2057602155885268
+                },
+                "type": "inertia_drop"
+            }
+        ],
+        "areas": [
+            {
+                "boundary": {
+                    "points": []
+                },
+                "id": "pick_1",
+                "orientation": 0.0,
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "template_ids": [
+                    "drive_through_pick"
+                ],
+                "type": "pick",
+                "vertex_in": {
+                    "area_id": "pick_1",
+                    "area_type": "pick",
+                    "id": "pick_1_in",
+                    "position": {
+                        "x": -5.052,
+                        "y": -4.203
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "in"
+                },
+                "vertex_out": {
+                    "area_id": "pick_1",
+                    "area_type": "pick",
+                    "id": "pick_1_out",
+                    "position": {
+                        "x": -2.052,
+                        "y": -4.203
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "out"
+                }
+            },
+            {
+                "boundary": {
+                    "points": []
+                },
+                "id": "drop_1",
+                "orientation": 0.0,
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "template_ids": [
+                    "drop_1",
+                    "default_drop_policy"
+                ],
+                "type": "drop",
+                "vertex_in": {
+                    "area_id": "drop_1",
+                    "area_type": "drop",
+                    "id": "drop_1_in",
+                    "position": {
+                        "x": -1.4075474923115543,
+                        "y": 4.239767395693601
+                    },
+                    "tangent_in": {
+                        "x": -0.998168496631191,
+                        "y": -0.06049506040189024
+                    },
+                    "vertex_type": "in"
+                },
+                "vertex_out": {
+                    "area_id": "drop_1",
+                    "area_type": "drop",
+                    "id": "drop_1_out",
+                    "position": {
+                        "x": -10.014836866577342,
+                        "y": 0.678130413238792
+                    },
+                    "tangent_in": {
+                        "x": 0.05078185267991453,
+                        "y": -0.9987097693716606
+                    },
+                    "vertex_type": "out"
+                }
+            },
+            {
+                "boundary": {
+                    "points": []
+                },
+                "id": "drop_2",
+                "orientation": 0.0,
+                "position": {
+                    "x": 13.705945583511667,
+                    "y": 3.128562376003229
+                },
+                "template_ids": [
+                    "drop_2",
+                    "default_drop_policy"
+                ],
+                "type": "drop",
+                "vertex_in": {
+                    "area_id": "drop_2",
+                    "area_type": "drop",
+                    "id": "drop_1_in",
+                    "position": {
+                        "x": 4.420114523796698,
+                        "y": 2.490360928600138
+                    },
+                    "tangent_in": {
+                        "x": 0.9983897448572465,
+                        "y": 0.05672669004870725
+                    },
+                    "vertex_type": "in"
+                },
+                "vertex_out": {
+                    "area_id": "drop_2",
+                    "area_type": "drop",
+                    "id": "drop_1_out",
+                    "position": {
+                        "x": 7.547301616071842,
+                        "y": 4.149684691848174
+                    },
+                    "tangent_in": {
+                        "x": -0.999874047483599,
+                        "y": 0.015871016626723626
+                    },
+                    "vertex_type": "out"
+                }
+            },
+            {
+                "boundary": {
+                    "points": []
+                },
+                "id": "staging_1",
+                "orientation": 0.0,
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "template_ids": [
+                    "queue_staging"
+                ],
+                "type": "staging",
+                "vertex_in": {
+                    "area_id": "staging_1",
+                    "area_type": "staging",
+                    "id": "staging_1_in",
+                    "position": {
+                        "x": -10.669,
+                        "y": -3.921
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "in"
+                },
+                "vertex_out": {
+                    "area_id": "staging_1",
+                    "area_type": "staging",
+                    "id": "staging_1_out",
+                    "position": {
+                        "x": -10.669,
+                        "y": -3.921
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "out"
+                }
+            },
+            {
+                "boundary": {
+                    "points": []
+                },
+                "id": "staging_2",
+                "orientation": 0.0,
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "template_ids": [
+                    "queue_staging"
+                ],
+                "type": "staging",
+                "vertex_in": {
+                    "area_id": "staging_2",
+                    "area_type": "staging",
+                    "id": "staging_2_in",
+                    "position": {
+                        "x": -9.309,
+                        "y": -2.422
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "in"
+                },
+                "vertex_out": {
+                    "area_id": "staging_2",
+                    "area_type": "staging",
+                    "id": "staging_2_out",
+                    "position": {
+                        "x": -9.309,
+                        "y": -2.422
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "out"
+                }
+            },
+            {
+                "boundary": {
+                    "points": []
+                },
+                "id": "staging_3",
+                "orientation": 0.0,
+                "position": {
+                    "x": -7.3,
+                    "y": -1.6
+                },
+                "template_ids": [
+                    "queue_staging"
+                ],
+                "type": "staging",
+                "vertex_in": {
+                    "area_id": "staging_3",
+                    "area_type": "staging",
+                    "id": "staging_3_in",
+                    "position": {
+                        "x": -7.3,
+                        "y": -1.6
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "in"
+                },
+                "vertex_out": {
+                    "area_id": "staging_3",
+                    "area_type": "staging",
+                    "id": "staging_3_out",
+                    "position": {
+                        "x": -7.3,
+                        "y": -1.6
+                    },
+                    "tangent_in": {
+                        "x": 1.0,
+                        "y": 0.0
+                    },
+                    "vertex_type": "out"
+                }
+            }
+        ],
+        "id": "heusenstamm",
+        "obstacles": [
+            {
+                "boundary": {
+                    "points": [
+                        {
+                            "x": -6.07,
+                            "y": -0.55
+                        },
+                        {
+                            "x": -4.02,
+                            "y": -0.56
+                        },
+                        {
+                            "x": -4.02,
+                            "y": 1.52
+                        },
+                        {
+                            "x": -6.08,
+                            "y": 1.45
+                        },
+                        {
+                            "x": -6.07,
+                            "y": -0.55
+                        }
+                    ]
+                },
+                "id": "o_pillar_1"
+            }
+        ],
+        "workspace": {
+            "points": [
+                {
+                    "x": -13.5,
+                    "y": 4.92
+                },
+                {
+                    "x": -13.5,
+                    "y": -0.8
+                },
+                {
+                    "x": -11.0,
+                    "y": -0.8
+                },
+                {
+                    "x": -11.0,
+                    "y": -4.65
+                },
+                {
+                    "x": -3.75,
+                    "y": -4.7
+                },
+                {
+                    "x": -3.75,
+                    "y": -6.0
+                },
+                {
+                    "x": 1.22,
+                    "y": -6.0
+                },
+                {
+                    "x": 1.22,
+                    "y": -3.05
+                },
+                {
+                    "x": 5.8,
+                    "y": -3.05
+                },
+                {
+                    "x": 5.8,
+                    "y": 1.7
+                },
+                {
+                    "x": 15.0,
+                    "y": 1.7
+                },
+                {
+                    "x": 15.0,
+                    "y": 5.0
+                },
+                {
+                    "x": -13.5,
+                    "y": 4.92
+                }
+            ]
+        }
+    },
+    "pathmap": {
+        "edges": [
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 5.6252307939623485,
+                        "clamp_start": 3.9141716544784977,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "vertex_3",
+                "target": "drop_2_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 12.488602355878337,
+                        "clamp_start": 4.96725880872355,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "vertex_5",
+                "target": "drop_1_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 1.0,
+                        "clamp_start": 1.0,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "staging_3_out",
+                "target": "pick_1_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 2.856945197063796,
+                        "clamp_start": 4.674580552587149,
+                        "intermediate_coefficients": [
+                            {
+                                "x": -6.170056999199142,
+                                "y": 2.6817015183568715
+                            }
+                        ]
+                    }
+                ],
+                "source": "vertex_1",
+                "target": "vertex_6"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 2.3349951491151266,
+                        "clamp_start": 3.422947744074746,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_1_out",
+                "target": "vertex_2"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 1.0,
+                        "clamp_start": 1.0,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "staging_1_out",
+                "target": "pick_1_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 1.8232711479506905,
+                        "clamp_start": 2.87105840364402,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "vertex_4",
+                "target": "staging_1_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 0.6084197525504239,
+                        "clamp_start": 2.3349951491151266,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "vertex_2",
+                "target": "staging_2_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 1.0,
+                        "clamp_start": 2.0100417240315114,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "staging_2_out",
+                "target": "pick_1_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 4.96725880872355,
+                        "clamp_start": 3.6840906334364445,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "pick_1_out",
+                "target": "vertex_5"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 2.87105840364402,
+                        "clamp_start": 3.422947744074746,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_1_out",
+                "target": "vertex_4"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 5.775177635800674,
+                        "clamp_start": 12.488602355878337,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_1_in",
+                "target": "drop_1_off"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 3.422947744074746,
+                        "clamp_start": 2.730929607443571,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_1_off",
+                "target": "drop_1_out"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 4.674580552587149,
+                        "clamp_start": 8.042351191649312,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_2_out",
+                "target": "vertex_1"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 3.6840906334364445,
+                        "clamp_start": 1.0,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "pick_1_in",
+                "target": "pick_1_out"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 8.042351191649312,
+                        "clamp_start": 8.46376997195084,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_2_off",
+                "target": "drop_2_out"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 4.617937070021605,
+                        "clamp_start": 5.6252307939623485,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_2_in",
+                "target": "drop_2_off"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 2.87105840364402,
+                        "clamp_start": 4.674580552587149,
+                        "intermediate_coefficients": [
+                            {
+                                "x": -6.3997832895489495,
+                                "y": 2.819537292566756
+                            }
+                        ]
+                    }
+                ],
+                "source": "vertex_1",
+                "target": "vertex_4"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 0.2664734479747093,
+                        "clamp_start": 2.856945197063796,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "vertex_6",
+                "target": "staging_3_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 2.3349951491151266,
+                        "clamp_start": 4.674580552587149,
+                        "intermediate_coefficients": [
+                            {
+                                "x": -6.043707539506746,
+                                "y": 3.0607498974340546
+                            }
+                        ]
+                    }
+                ],
+                "source": "vertex_1",
+                "target": "vertex_2"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 12.488602355878337,
+                        "clamp_start": 3.9141716544784977,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "vertex_3",
+                "target": "drop_1_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 3.9141716544784977,
+                        "clamp_start": 3.6840906334364445,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "pick_1_out",
+                "target": "vertex_3"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 5.6252307939623485,
+                        "clamp_start": 4.96725880872355,
+                        "intermediate_coefficients": [
+                            {
+                                "x": 1.0087853760271095,
+                                "y": 3.4169422299657626
+                            }
+                        ]
+                    }
+                ],
+                "source": "vertex_5",
+                "target": "drop_2_in"
+            },
+            {
+                "path_segments": [
+                    {
+                        "clamp_end": 2.856945197063796,
+                        "clamp_start": 3.422947744074746,
+                        "intermediate_coefficients": []
+                    }
+                ],
+                "source": "drop_1_out",
+                "target": "vertex_6"
+            }
+        ],
+        "vertices": [
+            {
+                "area_id": "drop_1",
+                "area_type": "drop",
+                "id": "drop_1_in",
+                "position": {
+                    "x": -3.760300589825901,
+                    "y": 4.362727007353712
+                },
+                "tangent_in": {
+                    "x": -0.998168496631191,
+                    "y": -0.06049506040189024
+                },
+                "vertex_type": "in"
+            },
+            {
+                "area_id": "drop_1",
+                "area_type": "drop",
+                "id": "drop_1_out",
+                "position": {
+                    "x": -9.919539965798664,
+                    "y": 1.5843066513417785
+                },
+                "tangent_in": {
+                    "x": 0.015845738555299842,
+                    "y": -0.9998744484032167
+                },
+                "vertex_type": "out"
+            },
+            {
+                "area_id": "drop_1",
+                "area_type": "drop",
+                "id": "drop_1_off",
+                "position": {
+                    "x": -10.928446380302042,
+                    "y": 2.844771228540493
+                },
+                "tangent_in": {
+                    "x": -0.9998253580147354,
+                    "y": -0.018688324448873597
+                },
+                "tangent_out": {
+                    "x": 0.8694565573927683,
+                    "y": -0.494009407609527
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "pick_1",
+                "area_type": "pick",
+                "id": "pick_1_in",
+                "position": {
+                    "x": -5.052,
+                    "y": -4.203
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "in"
+            },
+            {
+                "area_id": "pick_1",
+                "area_type": "pick",
+                "id": "pick_1_out",
+                "position": {
+                    "x": -2.052,
+                    "y": -4.203
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "out"
+            },
+            {
+                "area_id": "staging_1",
+                "area_type": "staging",
+                "id": "staging_1_in",
+                "position": {
+                    "x": -10.669,
+                    "y": -3.921
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "in"
+            },
+            {
+                "area_id": "staging_1",
+                "area_type": "staging",
+                "id": "staging_1_out",
+                "position": {
+                    "x": -10.669,
+                    "y": -3.921
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "out"
+            },
+            {
+                "area_id": "staging_2",
+                "area_type": "staging",
+                "id": "staging_2_in",
+                "position": {
+                    "x": -9.309,
+                    "y": -2.422
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "in"
+            },
+            {
+                "area_id": "staging_2",
+                "area_type": "staging",
+                "id": "staging_2_out",
+                "position": {
+                    "x": -9.309,
+                    "y": -2.422
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "out"
+            },
+            {
+                "area_id": "drop_2",
+                "area_type": "drop",
+                "id": "drop_2_in",
+                "position": {
+                    "x": 4.344933289916366,
+                    "y": 3.8905682534047994
+                },
+                "tangent_in": {
+                    "x": 0.9983897448572465,
+                    "y": 0.05672669004870725
+                },
+                "vertex_type": "in"
+            },
+            {
+                "area_id": "drop_2",
+                "area_type": "drop",
+                "id": "drop_2_out",
+                "position": {
+                    "x": 7.495556562247199,
+                    "y": 4.657676528407089
+                },
+                "tangent_in": {
+                    "x": -0.999874047483599,
+                    "y": 0.015871016626723626
+                },
+                "vertex_type": "out"
+            },
+            {
+                "area_id": "drop_2",
+                "area_type": "drop",
+                "id": "drop_2_off",
+                "position": {
+                    "x": 13.522835865836623,
+                    "y": 4.1371387703698215
+                },
+                "tangent_in": {
+                    "x": 0.9996179391690149,
+                    "y": -0.027640110193190577
+                },
+                "tangent_out": {
+                    "x": -0.9969778305636354,
+                    "y": 0.07768658419976389
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "staging_3",
+                "area_type": "staging",
+                "id": "staging_3_in",
+                "position": {
+                    "x": -7.3,
+                    "y": -1.6
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "in"
+            },
+            {
+                "area_id": "staging_3",
+                "area_type": "staging",
+                "id": "staging_3_out",
+                "position": {
+                    "x": -7.3,
+                    "y": -1.6
+                },
+                "tangent_in": {
+                    "x": 1.0,
+                    "y": 0.0
+                },
+                "vertex_type": "out"
+            },
+            {
+                "area_id": "",
+                "area_type": "none",
+                "id": "vertex_1",
+                "position": {
+                    "x": 1.6307845640829797,
+                    "y": 4.483226552347249
+                },
+                "tangent_in": {
+                    "x": -0.996639273541688,
+                    "y": -0.081915556729453
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "",
+                "area_type": "none",
+                "id": "vertex_2",
+                "position": {
+                    "x": -9.421680876914055,
+                    "y": -0.6507282844156688
+                },
+                "tangent_in": {
+                    "x": 0.0,
+                    "y": -1.0
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "",
+                "area_type": "none",
+                "id": "vertex_3",
+                "position": {
+                    "x": 0.5200717282689311,
+                    "y": 0.2625177762538673
+                },
+                "tangent_in": {
+                    "x": 0.26195063167457494,
+                    "y": 0.9650812745905347
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "",
+                "area_type": "none",
+                "id": "vertex_4",
+                "position": {
+                    "x": -10.536040856047046,
+                    "y": -0.6957332120743551
+                },
+                "tangent_in": {
+                    "x": -0.3713906763541033,
+                    "y": -0.9284766908852594
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "",
+                "area_type": "none",
+                "id": "vertex_5",
+                "position": {
+                    "x": -0.5239983373962751,
+                    "y": 0.4846603434166763
+                },
+                "tangent_in": {
+                    "x": -0.17888543819998337,
+                    "y": 0.9838699100999074
+                },
+                "vertex_type": "waypoint"
+            },
+            {
+                "area_id": "",
+                "area_type": "none",
+                "id": "vertex_6",
+                "position": {
+                    "x": -7.5023105307013465,
+                    "y": -0.7551928165812472
+                },
+                "tangent_in": {
+                    "x": 0.0,
+                    "y": -1.0
+                },
+                "vertex_type": "waypoint"
+            }
+        ]
+    }
+}
